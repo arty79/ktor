@@ -1,3 +1,5 @@
+package com.example.kotlinserver
+
 import io.ktor.application.call
 import io.ktor.application.install
 import io.ktor.features.ContentNegotiation
