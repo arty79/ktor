@@ -10,7 +10,8 @@ import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
 
 fun main() {
-    embeddedServer(Netty,23567) {
+    val port = System.getenv("PORT")?.toInt() ?: 23567
+    embeddedServer(Netty, port) {
         install(ContentNegotiation) {
             gson {
                 setPrettyPrinting()
